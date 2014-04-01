@@ -1,4 +1,4 @@
-function result = stitch_pair (image, target_image, sift_r, ...
+function [result, H, num_inliers, residual] = stitch_pair (image, target_image, sift_r, ...
     harris_r, harris_thresh, harris_sigma, num_putative_matches, ransac_n)
 
 image_bw = im2single(rgb2gray(image));
@@ -26,9 +26,8 @@ XY = image_descriptor_loc(left_matches,:);
 XY_ = target_image_descriptor_loc(right_matches,:);
 
 [H, num_inliers, residual] = ransac(XY, XY_, ransac_n, ...
-    @fit_homography, @homography_transform)
+    @fit_homography, @homography_transform);
 
 result = stitch(image, H, target_image);
 
-imshow(result);
 end
