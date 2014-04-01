@@ -1,4 +1,4 @@
-function [as, bs] = select_putative_matches(d1, d2, threshold, num)
+function [as, bs] = select_putative_matches(d1, d2, num)
     d1 = zscore(d1')';
     d2 = zscore(d2')';
     
