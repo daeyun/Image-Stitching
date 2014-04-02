@@ -1,4 +1,4 @@
 Image-Stitching
 ===============
 
-MATLAB code for image stitching
+MATLAB code for panorama image stitching.
