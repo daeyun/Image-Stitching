@@ -1,4 +1,4 @@
-% testing the fit_homography function based on the numbers from
+% Testing the fit_homography function based on numbers from
 % http://www.leet.it/home/giusti/teaching/matlab_sessions/stitching/stitch.html
 
 x1 = 1.0e+03 * [0.8860;
@@ -30,5 +30,6 @@ X_(1,:)=X_(1,:)./X_(3,:);
 X_(2,:)=X_(2,:)./X_(3,:);
 X_(3,:)=X_(3,:)./X_(3,:);
 
+% Display results
 X
 X_
