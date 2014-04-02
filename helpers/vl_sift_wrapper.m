@@ -6,7 +6,4 @@ function [f, d] = vl_sift_wrapper(I, circles)
     [f, d] = vl_sift(I,'frames',fc, 'orientations') ;
     d = double(d');
     f = double(f(1:2,:)');
-
-%     h1 = vl_plotframe(f) ;
-%     h2 = vl_plotframe(f) ;
 end

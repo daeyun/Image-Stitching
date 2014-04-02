@@ -1,6 +1,5 @@
 function [XY_] = homography_transform(XY, H)
-    [h, w] = size(XY);
-    Xi = cat(1, XY', ones(1, h));
+    Xi = cat(1, XY', ones(1, size(XY, 1)));
     lambdaXi_ = H*Xi;
     lambdaXi_ = lambdaXi_';
     XY_ = lambdaXi_(:,1:2);

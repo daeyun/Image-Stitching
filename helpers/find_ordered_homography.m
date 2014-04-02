@@ -1,5 +1,4 @@
-% images is a 1 by n cell array of images
-function [image_order] = ...
+function image_order = ...
     find_ordered_homography(images, sift_r, harris_r, harris_thresh, ...
         harris_sigma, num_putative_matches, ransac_n)
 
@@ -21,7 +20,7 @@ function [image_order] = ...
 
     link = cell(1, n_img);
     
-    [~,sort_index] = sort(num_inliers(:),'descend');
+    [~, sort_index] = sort(num_inliers(:), 'descend');
     inlier_thresh = num_inliers(sort_index(n_img*2-2));
 
     count_links = zeros(1, 2);
